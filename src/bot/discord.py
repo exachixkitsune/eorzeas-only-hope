@@ -15,7 +15,7 @@ class DiscordBot(discord.Client, BaseBot):
     pattern: re.Pattern  # type: ignore
 
     def __init__(self: DiscordBot, storage: DataStore):
-        BaseBot.__init__(self, storage)
+        BaseBot.__init__(self, storage, None)
         discord.Client.__init__(self)
 
     async def on_ready(self: DiscordBot):
